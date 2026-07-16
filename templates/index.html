@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Data Redundancy Removal System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Data Redundancy Removal System</h1>
+
+    <div class="stats">
+
+        <div class="card">
+            <h2 id="total">0</h2>
+            <p>Total Records</p>
+        </div>
+
+        <div class="card">
+            <h2 id="duplicate">0</h2>
+            <p>Duplicates Blocked</p>
+        </div>
+
+        <div class="card">
+            <h2 id="falsePositive">0</h2>
+            <p>False Positives</p>
+        </div>
+
+    </div>
+
+    <form onsubmit="event.preventDefault(); addRecord();">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter Full Name"
+            required>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter Email"
+            required>
+
+        <input
+            type="text"
+            id="phone"
+            placeholder="Enter Phone Number"
+            maxlength="10"
+            required>
+
+        <button type="submit">
+
+            Add Record
+
+        </button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search by Name, Email or Phone"
+            onkeyup="searchRecord()">
+
+    </div>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Name</th>
+
+            <th>Email</th>
+
+            <th>Phone</th>
+
+            <th>Created At</th>
+
+            <th>Action</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody id="tableData">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+========================================================
+        DATA REDUNDANCY REMOVAL SYSTEM LOG
+========================================================
+
+Date: 2026-07-16
+Status: Execution Started
+
+--------------------------------------------------------
+Loading Dataset...
+Status: Success
+
+Records Loaded: 5
+
+--------------------------------------------------------
+Creating Database...
+Status: Success
+
+Database Connected Successfully.
+
+--------------------------------------------------------
+Processing Records...
+
+Record 1
+Name   : John
+Email  : john@gmail.com
+Phone  : 9876543210
+Validation : Passed
+Classification : Unique
+Database Status : Added
+
+--------------------------------------------------------
+
+Record 2
+Name   : David
+Email  : david@gmail.com
+Phone  : 9123456780
+Validation : Passed
+Classification : Unique
+Database Status : Added
+
+--------------------------------------------------------
+
+Record 3
+Name   : Alice
+Email  : alice@gmail.com
+Phone  : 9988776655
+Validation : Passed
+Classification : Unique
+Database Status : Added
+
+--------------------------------------------------------
+
+Record 4
+Name   : John
+Email  : john@gmail.com
+Phone  : 9876543210
+Validation : Passed
+Classification : Duplicate
+Database Status : Rejected
+
+--------------------------------------------------------
+
+Record 5
+Name   : Jon
+Email  : john@gmail.com
+Phone  : 9876543210
+Validation : Passed
+Classification : False Positive
+Database Status : Rejected
+
+--------------------------------------------------------
+Execution Summary
+
+Total Records Processed : 5
+Unique Records Added    : 3
+Duplicate Records       : 1
+False Positives         : 1
+Invalid Records         : 0
+
+--------------------------------------------------------
+Status : Completed Successfully
+========================================================
